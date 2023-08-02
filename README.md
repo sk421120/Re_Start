@@ -28,3 +28,6 @@ https://react-ko.dev/
  - jsx 사용하기
 
     : javaScript에 마크업 넣기, 로직 + 태그 구성이 가능하다. 기존의 class는 className으로  변환하여 사용 (converter 링크 : https://transform.tools/html-to-jsx)
+ - 컴포넌트에 props(매개변수) 전달
+
+   : 컴포넌트에 객체, 배열, 함수 등 모든 javaScript 값을 props로 전달 가능하다. (props 변경X , 상호작용이 필요할 경우 state 설정)
