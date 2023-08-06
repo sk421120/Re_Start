@@ -46,3 +46,7 @@ ul {
   padding-left: 20px;
 }
 
+.ToolBar {
+  background-color: bisque;
+  padding: 1rem 0;
+}

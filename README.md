@@ -46,5 +46,19 @@ https://react-ko.dev/
 
    push, pop, reverse, sort / slice, filter, map ([...배열])
  - 컴포넌트 순수성 유지
- 
+
    : 컴포넌트의 용도가 복잡해지지 않도록 props를 적절하거나 컴포넌트 쪼개기..
+
+### 2023.08.04
+3. 상호작용 추가하기
+ - 이벤트 응답
+
+   : 컴포넌트에 이벤트 설정이 가능하다. 함수를 props로 전달할 경우 ()없이 이름만 전달한다. ( onClick={tmpClick} O / onClick={tmpClick()} X )
+
+   화살표 함수도 가능하다. ( onClick={ () => alert('test'); } )
+
+   상위 컴포넌트의 이벤트와 겹치지 않도록(버블이벤트) e.stopPropagation() 호출하여 막을 수 있다.
+
+   상위 컴포넌트에 onClickCapture로 우선 실행함수를 설정가능하다.
+
+   form 등의 연결된 기본 동작대신 특정 이벤트를 설정 할 경우 e.preventDefault() 호출하면 막을 수 있다.
