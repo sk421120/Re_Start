@@ -2,13 +2,14 @@ import { useImmer } from "use-immer";
 import AddMemo from "./AddMemo.jsx";
 import MemoList from "./MemoList.jsx";
 
+let nextId = 0;
 export default function UpdateArr() {
   const [memos, updateMemos] = useImmer([]);
 
   function handleAddTitle(title) {
     updateMemos((draft) => {
       draft.push({
-        id: memos.length,
+        id: nextId++,
         title: title,
       });
     });
