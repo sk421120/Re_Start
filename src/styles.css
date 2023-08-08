@@ -46,7 +46,32 @@ ul {
   padding-left: 20px;
 }
 
+li {
+  list-style: none;
+}
+
 .ToolBar {
   background-color: bisque;
   padding: 1rem 0;
+}
+
+.tabWrap {
+  width: 100%;
+  display: flex;
+  margin: 1rem auto;
+  text-align: center;
+  background-color: cornsilk;
+  cursor: pointer;
+}
+
+.tabWrap li {
+  margin: 0 auto;
+  width: 20%;
+  border: 2px solid cornsilk;
+  padding: 2rem 0;
+}
+
+.tabWrap li.on {
+  border: 2px dotted black;
+  border-radius: 1rem;
 }
