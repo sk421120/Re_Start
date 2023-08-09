@@ -14,6 +14,7 @@ import PackingList from "./PackingList.js";
 let nextId = 0;
 export default function Choose() {
   const [items, setItems] = useState([]);
+  const [reverse, setReverse] = useState(false);
 
   //   const [mine, setMine] = useState([]);
   //   let packed = mine.length;
@@ -66,14 +67,27 @@ export default function Choose() {
     setItems(items.filter((item) => item.id !== itemId));
   }
 
+  const displayList = [...items];
+  if (reverse) {
+    displayList.reverse();
+  }
+
   return (
     <>
       <AddItem onAddItem={handleAddItem} />
       <PackingList
-        items={items}
+        items={displayList}
         onChangeItem={handleChangeItem}
         onDeleteItem={handleDeleteItem}
-      />
+      />{" "}
+      <label>
+        <input
+          type="checkbox"
+          value={reverse}
+          onChange={(e) => setReverse(e.target.checked)}
+        />{" "}
+        Show reverse
+      </label>
       <hr />
       <b>
         {packed} out of {items.length} packed!
