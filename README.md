@@ -33,7 +33,6 @@ https://react-ko.dev/
    : 컴포넌트에 객체, 배열, 함수 등 모든 javaScript 값을 props로 전달 가능하다. (props 변경X , 상호작용이 필요할 경우 state 설정)
 
 ### 2023.08.03
-이어서..
  - 조건부 렌더링
 
    : javaScript 문법으로 조건부 렌더링이 가능하다. 삼항연산자 또는 if문으로 컴포넌트, 태그, 변수 등등
@@ -50,7 +49,7 @@ https://react-ko.dev/
    : 컴포넌트의 용도가 복잡해지지 않도록 props를 적절하거나 컴포넌트 쪼개기..
 
 ### 2023.08.04
-3. 상호작용 추가하기
+3. 상호작용 추가하기 (/interact)
  - 이벤트 응답
 
    : 컴포넌트에 이벤트 설정이 가능하다. 함수를 props로 전달할 경우 ()없이 이름만 전달한다. ( onClick={tmpClick} O / onClick={tmpClick()} X )
@@ -74,7 +73,7 @@ https://react-ko.dev/
    : React에서 화면에 컴포넌트를 표시하는 렌더링 과정
 
    렌더링 요청 ( 컴포넌트의 첫 렌더링 또는 state가 업데이트 된 경우 )
-
+   
    -> 컴포넌트 렌더링 ( 첫 렌더링은 root 컴포넌트 호출, 이후 렌더링은 업데이트 관련 함수 컴포넌트 )
    
    -> DOM에 커밋 ( 첫 렌더링은 appendChild()로 표시, 이후 렌더링은 최소한의 작업으로 최신 렌더링 출력과 일치하도록 함 )
@@ -99,7 +98,7 @@ https://react-ko.dev/
    concat, [...arr] / filter, slice / map / arr = copyArr.revrse();
 
 ### 2023.08.08
-4. state 관리
+4. state 관리 (/mng)
  - state로 입력에 반응하기
  - state 구조 선택
 
@@ -107,3 +106,14 @@ https://react-ko.dev/
  - 컴포넌트 간의 state 공유
 
    : state를 부모 컴포넌트로 끌어올려 컴포넌트끼리 공유가 가능하다. ( 제어와 비제어 )
+### 2023.08.09
+ - state 보존 및 재설정
+
+   : DOM 트리 내에서 동일 컴포넌트가 동일한 위치에서 렌더링 될 경우 state가 유지된다.
+    
+    key를 연동시키면 state를 재설정 하거나 유지가 가능하다.
+    
+    컴포넌트가 중첩되면 state가 초기화될 수 있다.
+ - State로직을 Reducer로 추출하기
+
+   : reducer로 반복적인 state 처리 코드를 줄일 수 있다. (코드 작업중)
