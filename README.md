@@ -114,6 +114,16 @@ https://react-ko.dev/
     key를 연동시키면 state를 재설정 하거나 유지가 가능하다.
     
     컴포넌트가 중첩되면 state가 초기화될 수 있다.
- - State로직을 Reducer로 추출하기
+ - State로직을 Reducer로 추출하기 (코드 작업중)
 
-   : reducer로 반복적인 state 처리 코드를 줄일 수 있다. (코드 작업중)
+   : reducer로 반복적인 state 처리 코드를 줄일 수 있다.
+### 2023.08.10
+ - context로 데이터 깊숙이 전달하기 (코드 작업 예정)
+ 
+  : useContext를 사용하여 하위 컴포넌트 트리에 매개변수 전달없이 데이터 등등 공유가 가능하다.
+
+ - reducer와 context로 확장하기 (코드 작업 예정)
+
+  : reducer와 context를 함께 사용하면 provider로 제공받는 하위 컴포넌트들이 필요한 context를 적절하게 사용 가능하다.
+
+  context-reducer를 사용하면 컴포넌트와 데이터처리를 분리가 된다. 컴포넌트가 무엇을 보여주는지 명확하게 알 수 있다.
