@@ -1,10 +1,12 @@
-const nextId = 0;
+const nextFId = 0;
+const nextNId = 0;
+
 export function noteReducer(state, action) {
   switch (action.type) {
     case "add_friend": {
       return {
         ...state,
-        id: nextId++,
+        id: nextFId++,
         name: action.name,
       };
     }
@@ -23,6 +25,9 @@ export function noteReducer(state, action) {
     case "post_note": {
       return {
         ...state,
+        id: nextNId++,
+        selectedId: action.friendId,
+        note: action.note,
         message: "",
       };
     }
